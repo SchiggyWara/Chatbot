@@ -28,7 +28,7 @@ Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
 ## Verwendung
 
-1. Laden Sie das Skript `chatbot.py` herunter und speichern Sie es auf Ihrem Computer.
+1. Laden Sie das Skript `main.py` herunter und speichern Sie es auf Ihrem Computer.
 
 2. Öffnen Sie die Befehlszeile und navigieren Sie zum Speicherort des Skripts.
 
