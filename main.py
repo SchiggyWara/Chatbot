@@ -53,12 +53,16 @@ chatbot = Chat(pairs, reflections)
 # Begrüßungsnachricht und Vorschläge
 print("Chatbot: Hallo, wie kann ich dir helfen?")
 print("Chatbot: Wenn du dir nicht sicher bist sind hier einige mögliche Vorschläge: WLAN, Internet, E-Mail, Drucker.")
+print("Chatbot: Wenn du beenden möchtest, kannst du 'Tschüss', 'Auf Wiedersehen' oder 'Bye' sagen.")
 
-# Starte die Chat-Schleife
+# Starten und beenden der Chat-Schleife
 while True:
     user_input = input("Du: ")
-    if user_input.lower() == "quit":
+    if user_input.lower() in ["tschüss", "auf wiedersehen", "bye"]:
+        print("Chatbot: Auf Wiedersehen!")
         break
     else:
-        print("Chatbot:", chatbot.respond(user_input))
-
+        response = chatbot.respond(user_input)
+        if response.startswith("Ich kann leider keine direkte Antwort auf deine Frage finden"):
+            print("Chatbot: " + response)
+            print("Chatbot: Wenn dir die Stichworte nicht weiterhelfen können, bitte kontaktiere unseren IT-Support unter der Nummer 123456789 oder per E-Mail support@win.de")
