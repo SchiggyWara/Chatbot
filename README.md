@@ -8,6 +8,7 @@ Um den Chatbot auszuführen, benötigen Sie:
 
 - Python (Version 3.6 oder höher)
 - Die NLTK-Bibliothek (Natural Language Toolkit)
+- Die tkinter-Bibliothek (Sprachanbindung für das GUI-Toolkit)
 
 
 
@@ -18,9 +19,10 @@ python --version
 
 Wenn Python installiert ist, wird die installierte Version angezeigt. Andernfalls müssen Sie Python von der offiziellen Python-Website herunterladen und installieren.
 
-2. Installieren Sie die NLTK-Bibliothek, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
+2. Installieren Sie die Bibliotheken, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
 pip install ntlk
+pip install tkinter
 
 Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
@@ -34,11 +36,15 @@ Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
 3. Führen Sie den Chatbot aus, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
-python chatbot.py 
+python main.py 
 
-4. Der Chatbot wird gestartet und Sie werden von einer Begrüßungsnachricht begrüßt. Geben Sie Ihre Fragen oder Probleme in der Befehlszeile ein, um Antworten oder Lösungsvorschläge zu erhalten.
+4. Der Chatbot wird gestartet und Sie werden von einer Begrüßungsnachricht begrüßt. Geben Sie Ihren Namen und ID ein und klicken Sie anschließend auf "Weiter".
 
-5. Um den Chatbot zu beenden, geben Sie einfach "quit" in die Befehlszeile ein.
+5. Nun können Sie dem Chatbot Ihre Frage zu Ihrem aktuellem IT-Problem stellen. Der Chatbot wird Ihnen dann eine enstprechende antwort geben.
+
+6. Sollte der Chatbot keine passende Antwort finden, werden zuerst einige Stichworte gegeben die bei der Problemfindung helfen können. Anschließend werden die Kontaktdaten eines IT-Support Mitarbeiters bereit gestellt.
+
+7. Wenn der Benutzer den Chatbot beenden möchte kann er entweder Stichworte wie: "Bye" oder "Auf wiedersehen" eingeben oder mit einem Klick auf den "Beenden" Button den Bot schließen.
 
 
 
