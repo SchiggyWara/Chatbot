@@ -52,6 +52,7 @@ chatbot = Chat(pairs, reflections)
 
 # Funktion zum Anzeigen der Chatbot-Antworten
 def display_response():
+    global entry  # Zugriff auf die globale Variable entry
     user_input = entry.get()  # Benutzereingabe abrufen
 
     if user_input.lower() in ["tschüss", "auf wiedersehen", "bye"]:
@@ -65,6 +66,35 @@ def display_response():
         else:
             messagebox.showinfo("Chatbot", response)
 
+# Funktion zum Fortfahren nach der Eingabe von Namen und ID
+def proceed():
+    global welcome_label  # Zugriff auf die globale Variable welcome_label
+    user_name = name_entry.get()
+    user_id = id_entry.get()
+    
+    if user_name == "" or user_id == "":
+        messagebox.showwarning("Fehlende Informationen", "Bitte gib deinen Namen und deine ID ein.")
+        return
+    
+    # Entferne Eingabefelder für Name und ID
+    name_label.destroy()
+    name_entry.destroy()
+    id_label.destroy()
+    id_entry.destroy()
+    proceed_button.destroy()
+
+    welcome_message = "Hallo, " + user_name + "! Wie kann ich dir helfen?"
+    welcome_label.config(text=welcome_message)
+
+    # Eingabefeld für Benutzerfrage
+    global entry  # Zugriff auf die globale Variable entry
+    entry = tk.Entry(root, width=50)
+    entry.pack(pady=5)
+
+    # Antwort-Button
+    antwort_button = tk.Button(root, text="Antwort anzeigen", command=display_response)
+    antwort_button.pack(pady=5)
+
 # Erstellen der GUI
 root = tk.Tk()
 root.title("IT-Support Chatbot")
@@ -73,19 +103,24 @@ root.title("IT-Support Chatbot")
 welcome_label = tk.Label(root, text="Willkommen beim IT-Support Chatbot!")
 welcome_label.pack(pady=10)
 
-welcome_label = tk.Label(root, text="Wie kann ich dir helfen?")
-welcome_label.pack(pady=10)
+# Eingabefeld für den Namen
+name_label = tk.Label(root, text="Bitte gib deinen Namen ein:")
+name_label.pack()
+name_entry = tk.Entry(root, width=50)
+name_entry.pack(pady=5)
 
-# Eingabefeld für Benutzerfrage
-entry = tk.Entry(root, width=50)
-entry.pack(pady=5)
+# Eingabefeld für die ID
+id_label = tk.Label(root, text="Bitte gib deine ID ein:")
+id_label.pack()
+id_entry = tk.Entry(root, width=50)
+id_entry.pack(pady=5)
 
-# Antwort-Button
-response_button = tk.Button(root, text="Antwort anzeigen", command=display_response)
-response_button.pack(pady=5)
+# Weiter-Button nach Eingabe von Namen und ID
+proceed_button = tk.Button(root, text="Weiter", command=proceed)
+proceed_button.pack(pady=5)
 
 # Beenden-Button
-quit_button = tk.Button(root, text="Beenden", command=root.quit)
+quit_button = tk.Button(root, text="Beenden", command=root.destroy)
 quit_button.pack(pady=5)
 
 # GUI starten
