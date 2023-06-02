@@ -1,10 +1,10 @@
-#Import der Pyhton Bibliothek "NLTK" - muss vorher mit dem Befehl "pip install nltk" installiert werden
+import tkinter as tk
+from tkinter import messagebox
 import nltk
 from nltk.chat.util import Chat, reflections
 
 # Definierte Muster und Antworten für den Chatbot
 pairs = [
-  
     [
         r"wie geht es dir?",
         ["Mir geht es gut, danke! Wie kann ich dir behilflich sein?"]
@@ -14,7 +14,7 @@ pairs = [
         ["Ja, ich bin verfügbar. Wie kann ich dir helfen?"]
     ],
     [
-        r"auf Wiedersehen",
+        r"auf Wiedersehen|Tschüss|Bye",
         ["Auf Wiedersehen!"]
     ],
     [
@@ -50,19 +50,44 @@ pairs = [
 # Initialisiere den Chatbot
 chatbot = Chat(pairs, reflections)
 
-# Begrüßungsnachricht und Vorschläge
-print("Chatbot: Hallo, wie kann ich dir helfen?")
-print("Chatbot: Wenn du dir nicht sicher bist sind hier einige mögliche Vorschläge: WLAN, Internet, E-Mail, Drucker.")
-print("Chatbot: Wenn du beenden möchtest, kannst du 'Tschüss', 'Auf Wiedersehen' oder 'Bye' sagen.")
+# Funktion zum Anzeigen der Chatbot-Antworten
+def display_response():
+    user_input = entry.get()  # Benutzereingabe abrufen
 
-# Starten und beenden der Chat-Schleife
-while True:
-    user_input = input("Du: ")
     if user_input.lower() in ["tschüss", "auf wiedersehen", "bye"]:
-        print("Chatbot: Auf Wiedersehen!")
-        break
+        messagebox.showinfo("Chatbot", "Auf Wiedersehen!")
+        root.quit()
     else:
         response = chatbot.respond(user_input)
         if response.startswith("Ich kann leider keine direkte Antwort auf deine Frage finden"):
-            print("Chatbot: " + response)
-            print("Chatbot: Wenn dir die Stichworte nicht weiterhelfen können, bitte kontaktiere unseren IT-Support unter der Nummer 123456789 oder per E-Mail support@win.de")
+            messagebox.showinfo("Chatbot", response)
+            messagebox.showinfo("Kontaktinformationen IT-Support", "Telefon: 123456789\nE-Mail: support@win.de")
+        else:
+            messagebox.showinfo("Chatbot", response)
+
+# Erstellen der GUI
+root = tk.Tk()
+root.title("IT-Support Chatbot")
+
+# Willkommensnachricht
+welcome_label = tk.Label(root, text="Willkommen beim IT-Support Chatbot!")
+welcome_label.pack(pady=10)
+
+welcome_label = tk.Label(root, text="Wie kann ich dir helfen?")
+welcome_label.pack(pady=10)
+
+# Eingabefeld für Benutzerfrage
+entry = tk.Entry(root, width=50)
+entry.pack(pady=5)
+
+# Antwort-Button
+response_button = tk.Button(root, text="Antwort anzeigen", command=display_response)
+response_button.pack(pady=5)
+
+# Beenden-Button
+quit_button = tk.Button(root, text="Beenden", command=root.quit)
+quit_button.pack(pady=5)
+
+# GUI starten
+root.mainloop()
+
