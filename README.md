@@ -36,7 +36,7 @@ Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
 3. Führen Sie den Chatbot aus, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
-python main.py 
+`python main.py´ 
 
 4. Der Chatbot wird gestartet und Sie werden von einer Begrüßungsnachricht begrüßt. Geben Sie Ihren Namen und ID ein und klicken Sie anschließend auf "Weiter".
 
