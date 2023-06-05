@@ -46,6 +46,10 @@ pairs = [
         ["In einigen Fällen können gelöschte Dateien wiederhergestellt werden. Bitte überprüfen Sie den Papierkorb auf Ihrem Computer, ob die Datei dort abgelegt wurde. Wenn nicht, könnten wir versuchen, Datenwiederherstellungssoftware zu verwenden, um die Datei wiederherzustellen."]
     ],
     [
+        r"(.*)(startet|nicht)",
+        ["Bitte überprüfen Sie zunächst, ob der Computer ordnungsgemäß mit Strom versorgt wird. Stellen Sie sicher, dass alle Kabel richtig angeschlossen sind. Versuchen Sie, den Computer neu zu starten und beobachten Sie, ob Fehlermeldungen angezeigt werden. Wenn das Problem weiterhin besteht, wenden Sie sich bitte an unseren IT-Support."]
+    ],
+    [
         r".*",
         ["Ich kann leider keine direkte Antwort auf deine Frage finden. Möglicherweise helfen dir Stichworte wie 'Drucker', 'WLAN', 'Internet' oder 'E-Mail' weiter."]
     ]
