@@ -42,6 +42,10 @@ pairs = [
         ["Wenn du Probleme mit deinem Passwort oder bei der Anmeldung hast, kontaktiere bitte unseren IT-Support. Sie werden dir gerne weiterhelfen."]
     ],
     [
+        r"(.*)(Datei gelöscht|wiederherstellen)",
+        ["In einigen Fällen können gelöschte Dateien wiederhergestellt werden. Bitte überprüfen Sie den Papierkorb auf Ihrem Computer, ob die Datei dort abgelegt wurde. Wenn nicht, könnten wir versuchen, Datenwiederherstellungssoftware zu verwenden, um die Datei wiederherzustellen."]
+    ],
+    [
         r".*",
         ["Ich kann leider keine direkte Antwort auf deine Frage finden. Möglicherweise helfen dir Stichworte wie 'Drucker', 'WLAN', 'Internet' oder 'E-Mail' weiter."]
     ]
