@@ -3,6 +3,7 @@ from tkinter import messagebox
 import nltk
 import mysql.connector
 from datetime import date
+from datetime import datetime
 from nltk.chat.util import Chat, reflections
  
 
@@ -22,11 +23,11 @@ def insert_data(name, user_id, anfrage):
     cursor = connection.cursor()
 
     # Aktuelles Datum abrufen
-    current_date = date.today()
+    now = datetime.now()
 
     # SQL-Statement für den Insert erstellen
     sql = "INSERT INTO anfrage (name, id, anfrage, datum) VALUES (%s, %s, %s, %s)"
-    values = (name, user_id, anfrage, current_date)
+    values = (name, user_id, anfrage, now)
 
     try:
         # Insert ausführen
@@ -165,4 +166,5 @@ quit_button.pack(pady=5)
 
 # GUI starten
 root.mainloop()
+
 
