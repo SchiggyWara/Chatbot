@@ -15,14 +15,15 @@ Um den Chatbot auszuführen, benötigen Sie:
 ## Installation
 1. Stellen Sie sicher, dass Python auf Ihrem System installiert ist. Überprüfen Sie dies, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
-python --version
+`python --version` 
 
 Wenn Python installiert ist, wird die installierte Version angezeigt. Andernfalls müssen Sie Python von der offiziellen Python-Website herunterladen und installieren.
 
 2. Installieren Sie die Bibliotheken, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
-pip install ntlk
-pip install tkinter
+`pip install ntlk`
+
+`pip install tkinter` 
 
 Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
