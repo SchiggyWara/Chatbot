@@ -1,6 +1,6 @@
 # IT-Kundensupport-Chatbot
 
-Dies ist ein einfacher Chatbot, der entwickelt wurde, um im IT-Kundensupport-Bereich zu helfen. Der Chatbot kann Fragen zu verschiedenen IT-Themen beantworten und Lösungsvorschläge für häufige Probleme geben.
+Dies ist ein einfacher Chatbot, der entwickelt wurde, um im IT-Kundensupport-Bereich zu helfen. Der Chatbot kann Fragen zu verschiedenen IT-Themen beantworten und Lösungsvorschläge für häufige Probleme geben. Außerdem werden Anfragen die nicht vom Chatbot bearbeitet werden können, in einer Datenbank gespeichert um so in Zukunft häufige Probleme zu analysieren oder den Chatbot zu verbessern.
 
 ## Voraussetzungen
 
@@ -19,13 +19,23 @@ Um den Chatbot auszuführen, benötigen Sie:
 
 Wenn Python installiert ist, wird die installierte Version angezeigt. Andernfalls müssen Sie Python von der offiziellen Python-Website herunterladen und installieren.
 
+
+3. Stellen Sie sicher, dass MySQL auf Ihrem System installiert ist. Überprüfen Sie dies, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
+
+`mysql --version`
+
+Wenn MySQL installiert ist, wird die installierte Version angezeigt. Andernfalls müssen Sie MySQL von der offiziellen MySQl-Website herunterladen und installieren.
+
+
 2. Installieren Sie die Bibliotheken, indem Sie den folgenden Befehl in der Befehlszeile ausführen:
 
 `pip install ntlk`
 
-`pip install tkinter` 
+`pip install tkinter`
 
-Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
+`pip install mysql-connector`
+
+Dadurch werden die benötigten Bibliotheken für den Chatbot installiert.
 
 
 
@@ -43,7 +53,7 @@ Dadurch wird die benötigte Bibliothek für den Chatbot installiert.
 
 5. Nun können Sie dem Chatbot Ihre Frage zu Ihrem aktuellem IT-Problem stellen. Der Chatbot wird Ihnen dann eine enstprechende antwort geben.
 
-6. Sollte der Chatbot keine passende Antwort finden, werden zuerst einige Stichworte gegeben die bei der Problemfindung helfen können. Anschließend werden die Kontaktdaten eines IT-Support Mitarbeiters bereit gestellt.
+6. Sollte der Chatbot keine passende Antwort finden, werden zuerst einige Stichworte gegeben die bei der Problemfindung helfen können. Anschließend werden die Kontaktdaten eines IT-Support Mitarbeiters bereit gestellt. Zudem werden diese Anfragen in einer Datenbank gespeichert um so den Chatbot in Zukunft zu verbessern.
 
 7. Wenn der Benutzer den Chatbot beenden möchte kann er entweder Stichworte wie: "Bye" oder "Auf wiedersehen" eingeben oder mit einem Klick auf den "Beenden" Button den Bot schließen.
 
