@@ -9,7 +9,7 @@ Um den Chatbot auszuführen, benötigen Sie:
 - Python (Version 3.6 oder höher)
 - Die NLTK-Bibliothek (Natural Language Toolkit)
 - Die tkinter-Bibliothek (Sprachanbindung für das GUI-Toolkit)
-
+- Die mysql-Connector Bibliothek (Datenbankanbindung zu mysql)
 
 
 ## Installation
