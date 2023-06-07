@@ -1,6 +1,6 @@
 # IT-Kundensupport-Chatbot
 
-Dies ist ein einfacher Chatbot, der entwickelt wurde, um im IT-Kundensupport-Bereich zu helfen. Der Chatbot kann Fragen zu verschiedenen IT-Themen beantworten und Lösungsvorschläge für häufige Probleme geben. Außerdem werden Anfragen die nicht vom Chatbot bearbeitet werden können, in einer Datenbank gespeichert um so in Zukunft häufige Probleme zu analysieren oder den Chatbot zu verbessern.
+Dies ist ein einfacher Chatbot, der entwickelt wurde, um im IT-Kundensupport-Bereich zu helfen. Der Chatbot kann Fragen zu verschiedenen IT-Themen beantworten und Lösungsvorschläge für häufige Probleme geben. Außerdem werden Anfragen die nicht vom Chatbot bearbeitet werden können, in einer Datenbank gespeichert um so in Zukunft häufige Probleme zu analysieren und den Chatbot zu verbessern.
 
 ## Voraussetzungen
 
