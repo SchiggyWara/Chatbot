@@ -105,7 +105,7 @@ def display_response():
         if response.startswith("Ich kann leider keine direkte Antwort auf deine Frage finden"):
             answer = messagebox.askquestion("Whoops!", response)
             if answer == 'yes':
-                messagebox.showinfo("Kontaktinformationen IT-Support", "\n\nTelefon: 123456789\n\nE-Mail: support@win.de")
+                messagebox.showinfo("Kontaktinformationen IT-Support", "\n\nTelefon: 123456789\n\nE-Mail: support@it-solutions.de")
             insert_data(user_name, user_id, user_input)
         else:
             messagebox.showinfo("Chatbot", response)
